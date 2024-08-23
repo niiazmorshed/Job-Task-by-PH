@@ -21,12 +21,14 @@ const displayWeather = (i) => {
   const weatherContainer = document.getElementById("weatherContainer");
   weatherContainer.textContent = "";
   const weatherCard = document.createElement("div");
-  weatherCard.classList = `flex gap-4 py-4`;
+  weatherCard.classList = `lg:flex gap-4 p-4`;
   weatherCard.innerHTML = `
   
-  <div><h1 class="text-8xl font-manrope">${i.current.temp_c} </h1>
+  <div><h1> <span class="text-8xl font-manrope">${i.current.temp_c}</span> <i class="fa-solid fa-circle-notch fa-lg align-top"></i></h1>
+  
   </div>
-  <i class="fa-solid fa-circle-notch fa-lg"></i>
+  
+  
   <div>
   <h3 class="text-6xl font-manrope font-bold text-blue-400" >  ${i.location.name}</h3>
   <h3 class="text-2xl font-manrope font-extrabold text-yellow-600" ><span class="font-bold ">Date & Time:</span> ${i.location.localtime}</h3>
