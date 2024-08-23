@@ -16,33 +16,44 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <!-- Manrope Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-manrope {
+        font-family: "Manrope", sans-serif;
+      }
+    </style>
     <title>Cloud Cast</title>
   </head>
 
   <body>
+    <header></header>
     <main>
       <section
         class="lg:min-h-screen bg-[url(image/mist.jpg)] bg-no-repeat bg-center"
       >
-        <section
-          class="flex lg:min-h-screen text-white"
-        >
+        <section class="lg:min-h-screen text-white">
           <div>
-            <div id="weatherContainer" class="lg:flex gap-2">
-              <!-- <div class="flex border w-3/2 gap-3">
-                <div><h1 class="text-4xl">29 Degree</h1></div>
-                <div>
-                  <h3>Dhaka</h3>
-                  <h3>Date</h3>
-                </div>
-                <div>Icon</div>
-              </div> -->
+            <div
+              id="weatherContainer"
+              class="lg:flex gap-2 p-2 justify-center"
+            ></div>
 
-              <div class="border w-3/1">
-                <!-- <p>sanar forcast</p> -->
-                
-              </div>
-            </div>
+            <div id="forecastContainer" class="p-2"></div>
+          </div>
+          <div class="flex justify-center m-4 gap-2">
+            <input
+            id="search-field"
+              type="text"
+              placeholder="Search here"
+              class="input w-full max-w-xs bg-gray-500"
+            />
+            <button onclick="handleSearch()" class="btn btn-outline btn-success">Search</button>
           </div>
         </section>
       </section>
